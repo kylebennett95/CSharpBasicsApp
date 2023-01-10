@@ -4,40 +4,43 @@
     {
         static void Main(string[] args)
         {
+
+            UserInput taco = new UserInput();
+
             Console.Write("Enter your name: ");
-            string? name = Console.ReadLine();
+            taco.Name = Console.ReadLine();
             
-            while (string.IsNullOrWhiteSpace(name))
+            while (string.IsNullOrWhiteSpace(taco.Name))
             {
                 Console.WriteLine("Please enter a name: ");
-                name = Console.ReadLine();
+                taco.Name = Console.ReadLine();
             }
             Console.Clear();
 
             Console.Write("What is your favorite day of the week? ");
-            string? dayOfWeek = Console.ReadLine();
+            taco.FavoriteDayOfWeek = Console.ReadLine();
 
-            while (string.IsNullOrWhiteSpace(dayOfWeek))
+            while (string.IsNullOrWhiteSpace(taco.FavoriteDayOfWeek))
             {
                 Console.WriteLine("Please enter a name: ");
-                dayOfWeek = Console.ReadLine();
+                taco.FavoriteDayOfWeek = Console.ReadLine();
             }
             Console.Clear();
             
             Console.Write("What is your least favorite school subject? ");
-            string? leastFaveSubject = Console.ReadLine();
+            taco.LeastFavoriteSubject = Console.ReadLine();
 
-            while (string.IsNullOrWhiteSpace(leastFaveSubject))
+            while (string.IsNullOrWhiteSpace(taco.LeastFavoriteSubject))
             {
                 Console.WriteLine("Please enter a name: ");
-                leastFaveSubject = Console.ReadLine();
+                taco.LeastFavoriteSubject = Console.ReadLine();
             }
             Console.Clear();
 
             string displayText = $@"
-Name: {name}
-Favorite Day of the Week: {dayOfWeek}
-Least favorite school subject: {leastFaveSubject}";
+Name: {taco.Name}
+Favorite Day of the Week: {taco.FavoriteDayOfWeek}
+Least favorite school subject: {taco.LeastFavoriteSubject}";
 
             Console.Write(displayText);
 
